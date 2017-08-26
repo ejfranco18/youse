@@ -1,0 +1,7 @@
+default: --no-source --color --format pretty BROWSER=firefox
+firefox: BROWSER=firefox
+chrome:  BROWSER=chrome
+<% result_html = "--format html -o results/report_#{Time.now.strftime("%Y-%m-%d_%H-%M-%S")}.html --format json -o cucumber.json / " %>
+#<% common = "--tags ~@wip --strict" %>
+report: -r features <%= common %> <%= result_html %> BROWSER=firefox
+html_report: <%= common %> --format html --out=features_report.html features
