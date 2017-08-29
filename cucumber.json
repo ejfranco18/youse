@@ -1,0 +1,70 @@
+[
+  {
+    "uri": "features/youse.feature",
+    "id": "enter-to-the-youse-site",
+    "keyword": "Feature",
+    "name": "Enter to the Youse site",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "id": "enter-to-the-youse-site;logout-a-registered-user",
+        "keyword": "Scenario",
+        "name": "Logout a registered user",
+        "description": "",
+        "line": 16,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "The user is on the youse site",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/youse.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3878038000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "Is logged on the site",
+            "line": 18,
+            "match": {
+              "location": "features/step_definitions/youse.rb:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5440693000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "The user logs out",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/youse.rb:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1650300000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "The user should be on the home page",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/youse.rb:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17910000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
