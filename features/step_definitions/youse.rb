@@ -133,25 +133,32 @@ And(/^Sets the car information$/) do
     # @zip= rand(10000000..99999999)
     @zip= "01001-000"
     @browser.input(id: "auto_order_flow_pricing_requirements_vehicle_attributes_address_attributes_zipcode").send_keys @zip
+    form_sleep
     @gender_size= @browser.select(id: "auto_order_flow_pricing_requirements_insured_person_attributes_gender").options.size
     @rand_gender= rand(1..@model_size-1)
     @browser.select(id: "auto_order_flow_pricing_requirements_insured_person_attributes_gender").option(index: @rand_gender).select
+    form_sleep
     @day= rand(01..30)
     @month= rand(01..12)
     @year= rand(1930..1999)
     @browser.input(id:"auto_order_flow_pricing_requirements_insured_person_attributes_date_of_birth").send_keys @day+@month+@year
+    form_sleep
     @status_size= @browser.select(id: "auto_order_flow_pricing_requirements_insured_person_attributes_marital_status").options.size
     @rand_status= rand(1..@model_size-1)
     @browser.select(id: "auto_order_flow_pricing_requirements_insured_person_attributes_marital_status").option(index: @rand_status).select
+    form_sleep
     @person_size= @browser.select(id: "auto_order_flow_pricing_requirements_driver_attributes_same_as_insured_person").options.size
     @rand_person= rand(1..@model_size-1)
     @browser.select(id: "auto_order_flow_pricing_requirements_driver_attributes_same_as_insured_person").option(index: @rand_person).select
+    form_sleep
     @driver_size= @browser.select(id: "auto_order_flow_pricing_requirements_driver_attributes_young_driver").options.size
     @rand_driver= rand(1..@model_size-1)
     @browser.select(id: "auto_order_flow_pricing_requirements_driver_attributes_young_driver").option(index: @rand_driver).select
+    form_sleep
     @claim_size= @browser.select(id: "auto_order_flow_pricing_requirements_driver_attributes_years_since_last_claim").options.size
     @rand_claim= rand(1..@model_size-1)
     @browser.select(id: "auto_order_flow_pricing_requirements_driver_attributes_years_since_last_claim").option(index: @rand_claim).select
+    form_sleep
     @browser.input(class: %w(button button--primary)).click
     expect(@browser.h2(class: %w(h2)).text).to include "A medida certa é você quem escolhe."
   end
